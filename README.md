@@ -5,7 +5,7 @@ Implemented Game of life with memory optimization
 
 
 ## Memory Savings
-Many Implementations of Conway's Game Of Life use require two boards, one for the current step, and one to store the next step.
+Most Implementations of Conway's Game Of Life usually require two boards. One for the current step, and one to store the next step.
 
 In our immplementation, we simply use one board and two vectors to store the current and previous lines. To achieve this efficiency, we simply retain the current line and the line above it in a vector. When the current line is finished, then the previous line no longer has any effect on the rest of the board, and therefore is able to be saved. The program them loads the next line into a temp array, continuing  until it reaches the end of the board.
 
